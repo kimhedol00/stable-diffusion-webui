@@ -77,8 +77,8 @@ def webui():
                 auto_launch_browser = not cmd_opts.webui_is_non_local
 
         app, local_url, share_url = shared.demo.launch(
-            share=cmd_opts.share,
-            server_name=initialize_util.gradio_server_name(),
+            share=True,
+            server_name=server_name,
             server_port=cmd_opts.port,
             ssl_keyfile=cmd_opts.tls_keyfile,
             ssl_certfile=cmd_opts.tls_certfile,
